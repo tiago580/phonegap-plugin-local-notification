@@ -96,7 +96,7 @@ public class LocalNotifications extends CordovaPlugin {
                         .setContentText(body)
                         .setSmallIcon(context.getApplicationInfo().icon)
                         .setContentIntent(contentIntent)
-                        .setAutoCancel(autoClose);
+                        .setAutoCancel(false);
 
         if (icon.startsWith("http://") || icon.startsWith("https://")) {
             Bitmap bitmap = getBitmapFromURL(icon);
