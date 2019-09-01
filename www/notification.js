@@ -27,6 +27,7 @@ var Notification = function(title, options) {
     this.body = getValue(options.body, '');
     this.tag = getValue(options.tag, '');
     this.icon = getValue(options.icon, '');
+    this.autoClose = getValue(options.autoClose, 'false');
     this.onclick = function() {};
     this.onshow = function() {};
     this.onerror = function() {};
@@ -50,7 +51,7 @@ var Notification = function(title, options) {
         that.onerror();
     };
 
-    exec(success, failure, 'LocalNotifications', 'show', [this.title, this.dir, this.lang, this.body, this.tag, this.icon]);
+    exec(success, failure, 'LocalNotifications', 'show', [this.title, this.dir, this.lang, this.body, this.tag, this.icon, this.autoClose]);
 };
 
 /**
