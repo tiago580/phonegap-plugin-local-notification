@@ -76,7 +76,7 @@ public class LocalNotifications extends CordovaPlugin {
         String body = args.getString(3);
         String tag = args.getString(4);
         String icon = args.getString(5);
-        String autoClose = args.getBoolean(6);
+        boolean autoClose = args.getBoolean(6);
 
         Context context = cordova.getActivity();
 
